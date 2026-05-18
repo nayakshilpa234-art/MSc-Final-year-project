@@ -394,7 +394,7 @@ Format MUST exactly match this structure:
             if (category) replyText += ` for ${category} lovers`;
             replyText += `:\n\n`;
 
-            const placesList = places.map((p, i) => `${i + 1}. ${p.name} (${p.location}) - $${p.price}\n   ${p.description}`).join('\n\n');
+            const placesList = places.map((p, i) => `${i + 1}. ${p.name} (${p.location}) - ₹${p.price.toLocaleString()}\n   ${p.description}`).join('\n\n');
             const followUp = '\n\nIf you want to book one of these, try saying "Book [place name]".';
 
             return res.json({ reply: replyText + placesList + followUp, data: places });
@@ -424,7 +424,7 @@ Format MUST exactly match this structure:
 
         if (fuzzyResults.length > 0) {
             let replyText = `I found ${fuzzyResults.length} destination(s) matching "${message}":\n\n`;
-            const placesList = fuzzyResults.map((p, i) => `${i + 1}. ${p.name} (${p.location}) - $${p.price}\n   ${p.description}`).join('\n\n');
+            const placesList = fuzzyResults.map((p, i) => `${i + 1}. ${p.name} (${p.location}) - ₹${p.price.toLocaleString()}\n   ${p.description}`).join('\n\n');
             replyText += placesList + '\n\nWant to book one? Say "Book [place name]" or ask for more details!';
             return res.json({ reply: replyText, data: fuzzyResults });
         }
