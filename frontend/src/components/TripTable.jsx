@@ -48,7 +48,7 @@ const TripTable = ({ addToCart, onTripAdded }) => {
                                 </span>
                             )}
                         </div>
-                        <p style={{ fontSize: '22px', fontWeight: 'bold', margin: 'auto 0 10px 0', color: 'var(--text-main)' }}>${trip.price}</p>
+                        <p style={{ fontSize: '22px', fontWeight: 'bold', margin: 'auto 0 10px 0', color: 'var(--text-main)' }}>₹{trip.price.toLocaleString()}</p>
                         <button className="btn btn-accent" onClick={() => handleAdd(trip)} style={{ padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', width: '100%', fontSize: '14px' }}>
                           <ShoppingCart size={16} /> Add to Cart
                         </button>

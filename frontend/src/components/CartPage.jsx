@@ -20,7 +20,7 @@ const CartPage = ({ cart, setCart }) => {
             <thead>
               <tr style={{ borderBottom: '1px solid var(--border)' }}>
                 <th style={{ padding: '15px', textAlign: 'left' }}>Trip</th>
-                <th style={{ padding: '15px', textAlign: 'left' }}>Price ($)</th>
+                <th style={{ padding: '15px', textAlign: 'left' }}>Price (₹)</th>
                 <th style={{ padding: '15px', textAlign: 'center' }}>Remove</th>
               </tr>
             </thead>
@@ -30,7 +30,7 @@ const CartPage = ({ cart, setCart }) => {
                   <td style={{ padding: '15px' }}>
                     <strong>{item.type}</strong> - {item.destination}
                   </td>
-                  <td style={{ padding: '15px', color: 'var(--accent)' }}>${item.price}</td>
+                  <td style={{ padding: '15px', color: 'var(--accent)' }}>₹{item.price.toLocaleString()}</td>
                   <td style={{ padding: '15px', textAlign: 'center' }}>
                     <button className="btn" style={{ padding: '5px 10px', background: 'transparent', color: 'var(--danger)' }} onClick={() => removeItem(item.id)}>
                       <Trash2 size={16} />
@@ -41,7 +41,7 @@ const CartPage = ({ cart, setCart }) => {
             </tbody>
           </table>
           <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '20px', padding: '20px 0', borderTop: '1px solid var(--border)' }}>
-            <h3 style={{ margin: 0 }}>Total: <span style={{ color: 'var(--accent)' }}>${totalPrice}</span></h3>
+            <h3 style={{ margin: 0 }}>Total: <span style={{ color: 'var(--accent)' }}>₹{totalPrice.toLocaleString()}</span></h3>
             <button className="btn btn-accent">Proceed to Checkout</button>
           </div>
         </>

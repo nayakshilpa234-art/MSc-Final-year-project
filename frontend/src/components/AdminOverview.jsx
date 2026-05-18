@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { TrendingUp, Users, DollarSign, Map, Calendar, Activity } from 'lucide-react';
+import { TrendingUp, Users, IndianRupee, Map, Calendar, Activity } from 'lucide-react';
 
 const AdminOverview = () => {
     const [stats, setStats] = useState({
@@ -47,7 +47,7 @@ const AdminOverview = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginBottom: '30px' }}>
                 <div className="glass-panel" style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
                     <div style={{ background: 'rgba(16, 185, 129, 0.2)', padding: '15px', borderRadius: '50%' }}>
-                        <DollarSign color="#10b981" size={24} />
+                        <IndianRupee color="#10b981" size={24} />
                     </div>
                     <div>
                         <p style={{ margin: '0 0 5px 0', color: 'var(--text-muted)', fontSize: '14px' }}>Total Revenue</p>

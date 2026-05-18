@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost:27017/ai-tourist').then(async () => {
             location: 'California',
             category: 'beach',
             description: 'Beautiful sandy beach with perfect waves.',
-            price: 200,
+            price: 15000,
             imageUrl: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500&h=300&fit=crop'
         },
         {
@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost:27017/ai-tourist').then(async () => {
             location: 'Colorado',
             category: 'mountain',
             description: 'Incredible skiing and mountain views.',
-            price: 350,
+            price: 28000,
             imageUrl: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&h=300&fit=crop'
         },
         {
@@ -25,7 +25,7 @@ mongoose.connect('mongodb://localhost:27017/ai-tourist').then(async () => {
             location: 'Rome',
             category: 'historical',
             description: 'Ancient amphitheater with a rich history.',
-            price: 150,
+            price: 12000,
             imageUrl: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&h=300&fit=crop'
         }
     ]);

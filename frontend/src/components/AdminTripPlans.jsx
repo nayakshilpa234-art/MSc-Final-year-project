@@ -83,7 +83,7 @@ const AdminTripPlans = () => {
                                     <tr key={trip._id}>
                                         <td>{trip.destination}</td>
                                         <td>{trip.duration}</td>
-                                        <td>${trip.price}</td>
+                                        <td>₹{trip.price.toLocaleString()}</td>
                                         <td>
                                             <button className="btn" style={{ padding: '5px 10px', background: 'transparent', color: 'var(--text-main)' }} onClick={() => handleEdit(trip)}>
                                                 <Edit2 size={16} />
@@ -133,7 +133,7 @@ const AdminTripPlans = () => {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <label>Price ($)</label>
+                                <label>Price (₹)</label>
                                 <input required type="number" placeholder="1500" value={formData.price} onChange={e => setFormData({ ...formData, price: e.target.value })} />
                             </div>
                             <div style={{ display: 'flex', gap: '10px' }}>

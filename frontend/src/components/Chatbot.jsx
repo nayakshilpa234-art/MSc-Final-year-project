@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { Send, MapPin, DollarSign, Info, Mic, MicOff, Plus, Trash2, Edit3, Search, MessageSquare } from 'lucide-react';
+import { Send, MapPin, IndianRupee, Info, Mic, MicOff, Plus, Trash2, Edit3, Search, MessageSquare } from 'lucide-react';
 import TripTable from './TripTable';
 import TransportCards from './TransportCards';
 import SeatSelector from './SeatSelector';
@@ -1244,7 +1244,7 @@ const Chatbot = ({ addToCart }) => {
                                             <MapPin size={14} /> {dest.location}
                                         </p>
                                         <p style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '14px', color: 'var(--accent)', marginTop: '5px' }}>
-                                            <DollarSign size={14} /> {dest.price} / person
+                                            <IndianRupee size={14} /> ₹{dest.price} / person
                                         </p>
                                     </div>
                                 ))}

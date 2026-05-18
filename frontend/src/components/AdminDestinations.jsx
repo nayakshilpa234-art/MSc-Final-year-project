@@ -73,7 +73,7 @@ const AdminDestinations = () => {
                             <td>{dest.name}</td>
                             <td>{dest.location}</td>
                             <td style={{ textTransform: 'capitalize' }}>{dest.category}</td>
-                            <td>${dest.price}</td>
+                            <td>₹{dest.price.toLocaleString()}</td>
                             <td>
                                 <button className="btn" style={{ padding: '5px 10px', background: 'transparent', color: 'var(--text-main)' }} onClick={() => handleEdit(dest)}>
                                     <Edit2 size={16} />
@@ -116,7 +116,7 @@ const AdminDestinations = () => {
                                 <textarea required rows="3" value={formData.description} onChange={e => setFormData({ ...formData, description: e.target.value })} />
                             </div>
                             <div className="form-group">
-                                <label>Price ($)</label>
+                                <label>Price (₹)</label>
                                 <input required type="number" value={formData.price} onChange={e => setFormData({ ...formData, price: e.target.value })} />
                             </div>
                             <div className="form-group">
