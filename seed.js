@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Destination = require('./backend/models/Destination');
+const Destination = require('./models/Destination');
 
 mongoose.connect('mongodb://localhost:27017/ai-tourist').then(async () => {
     await Destination.deleteMany({});
